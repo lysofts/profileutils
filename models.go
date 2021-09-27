@@ -4,7 +4,7 @@ import "github.com/golang-jwt/jwt"
 
 //User is the model that defines auth users saved in database
 type User struct {
-	UID          string `json:"uid,omitempty" bson:"_id"`
+	UID          string `json:"id,omitempty" bson:"_id"`
 	FirstName    string `json:"firstName,omitempty" validate:"required, min=2, max=100" bson:"firstName"`
 	LastName     string `json:"lastName,omitempty" validate:"required, min=2, max=100" bson:"lastName"`
 	Email        string `json:"email,omitempty" validate:"email, required"`
